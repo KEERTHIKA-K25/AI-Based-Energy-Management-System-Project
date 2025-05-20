@@ -1,0 +1,53 @@
+/* Marquee Container */
+.feedback-marquee {
+    width: 1351;
+    background-color: #0a0a0a; /* Dark background for contrast */
+    padding: 15px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+  }
+  
+  /* Moving Text */
+  .feedback-marquee .marquee-content {
+    display: relative;
+    gap: 100px;
+    font-size: 18px;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 80px;
+  }
+
+  .feed-content {
+    margin: 0px 100px;
+
+  }
+
+  .feedback-marquee {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    background: black; /* Example background */
+    color: white;
+    padding: 10px 0;
+  }
+  
+  .feedback-marquee p {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    animation: marquee 10s linear infinite;
+  }
+  
+  @keyframes marquee {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  

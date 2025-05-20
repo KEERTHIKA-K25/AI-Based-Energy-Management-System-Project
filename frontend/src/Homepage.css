@@ -1,0 +1,240 @@
+/* Home container with fixed height and scrollable content */
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+p {
+    font-family: "PT Serif";
+    font-size: 16px;
+}
+
+.sub-title {
+    font-family: "Nunito Sans";
+    font-weight: normal;
+}
+.home-container {
+    position: relative;
+    width: 1520px;
+    height: 730px; /* Fixed height */
+    overflow: hidden;
+    background-repeat: repeat;
+    background-image: url('/public/video2.gif'); /* Path to your GIF */
+    background-size: 700px 700px; /* Adjust the tile size */
+    z-index: -1;
+  }
+  
+  
+  
+  /* changed over here for gradient */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #1A1A1D 50%, rgba(39, 68, 93, 0) 100%);
+    z-index: -1;
+  }
+  
+  /* Content inside the video section */
+  .content {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 0;
+  }
+  
+  h1 {
+    font-size: 60px;
+    color:white;
+    font-weight: bold;
+    text-align: left;
+    margin: 0px;
+  
+  }
+  
+  .head-1{
+    margin: 230px;
+    margin-bottom: 0px;
+    margin-left: 150px;
+    font-family: "Open Sans";
+    font-style: italic;
+    font-weight: lighter;
+  }
+  
+  .head-2{
+    margin-left: 200px;
+    margin-top: 30px;
+    font-family: "Open Sans";
+    font-style: italic;
+    font-weight: lighter;
+  
+  }
+  
+  .h3-home {
+    font-size: 2.5rem;
+    color: #71BBB2;
+    padding:10px;
+    padding-bottom: 0;
+  }
+  
+  /* Scrollable content below the video */
+  .scrollable-content {
+    padding:2.1px;
+    background-color:#1A1A1D;
+    width: 1351px;
+    color:white;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .content-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    padding: 150px 50px 50px 200px;
+    background: transparent;
+    border-radius: 15px;
+    /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); */
+    backdrop-filter: blur(10px);
+    
+  }
+  
+  .text-content {
+    max-width: 500px;
+    color: white;
+  }
+  
+  .text-content h2 {
+    color: #71BBB2;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .text-content p {
+    font-size: 16px;
+    line-height: 2;
+    padding-left: 10px;
+  }
+  
+  .video-container {
+    border-radius: 10px;
+    background-image: url('/public/video1.gif'); /* Path to your GIF */
+    background-size: 480px 270px;
+    width: 480px;
+    height: 270px; /* Fixed height */
+    overflow: hidden; /* Adjust the tile size */
+    z-index: 10;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .content-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+  }
+  
+
+  .c p {
+    width: 75%;
+    line-height: 2;
+    padding-left: 10px;
+  }
+  
+  .c {
+    margin: 50px;
+    padding: 10px;
+    padding-left: 100px;
+    background-color:transparent;
+  
+  }
+  .d {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 100px auto;
+    text-align: left;
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out; /* Smooth Transition */
+  }
+  
+  /* Custom Dashboards Heading */
+  .d h4 {
+    font-weight: bold;
+    color: #27445D; /* Dark blue */
+  }
+  
+  /* Custom Dashboards Paragraph */
+  .d p {
+    color: #666; /* Grayish text */
+    line-height: 1.6;
+  }
+  .sub-title{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color:#71BBB2;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background-color:#1197c8;
+    padding-top: 100px;
+    padding-bottom:100px;
+    opacity: 0.8;
+    width: 100%;
+    flex-grow: 1;
+    overflow: auto;
+  }
+  
+  
+  
+  .ways {
+    font-size: 52px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    color: #1A1A1D;
+    margin: 0px;
+  }
+  
+  
+  .button {
+    margin: 10px 70px;
+    width: 150px;
+    height: 40px;
+    font-size: 18px;
+    border: none;
+    background-color: #1A1A1D;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 100px;
+    transition: background 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #27445D;
+  }
+
+  .feed{
+    font-size: 2.5rem;
+    color: #71BBB2;
+    padding:10px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    width: 1351px;
+  }
+
+ .gap-cont {
+  width: 1518px;
+  padding-bottom: 50px;
+ }
+ 

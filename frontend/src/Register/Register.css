@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "PT Serif";
+    min-height: 690px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: linear-gradient(135deg, #1197c8, #1d1f22); */
+}
+
+/* .container-register {
+    background: linear-gradient(to right, #1197c8, #1d1f22);
+    padding: 2rem;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    color: white;
+} */
+
+body .header {
+    position: fixed;
+}
+
+.register-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 800px;
+  gap: 80px;
+  width: 1520px;
+  margin: 0px;
+  padding: 0px;
+  background: linear-gradient(to left, #1197c8 10%, #1d1f22 50%);
+ 
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.register-box {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2.5rem;
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  color: white;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.register-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #4da8da;
+}
+
+.register-subtitle {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #a1c6ea;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 50px;
+}
+
+.input-container input,
+.input-container select {
+  background: none;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.input-container select {
+  appearance: none; 
+}
+
+.input-container input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.register-btn {
+  background: #4da8da;
+  border: none;
+  padding: 1rem;
+  width: 100%;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.register-btn:hover {
+  background: #3586b1;
+}
+
+.login-link {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.login-link a {
+  color: #4da8da;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.gif-container img {
+  width: 400px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .register-page {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .gif-container img {
+    width: 100%;
+  }
+}
+
+option {
+    background-color: #3586b1;
+}
