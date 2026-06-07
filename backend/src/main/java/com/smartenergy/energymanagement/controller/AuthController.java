@@ -54,7 +54,7 @@ public class AuthController {
         }
 
         if (userService.emailExists(user.getEmail())) {
-            return ResponseEntity.status(400).body("Email already exists!");
+            return ResponseEntity.status(409).body("Email already exists!");
         }
         
         userService.register(user);
