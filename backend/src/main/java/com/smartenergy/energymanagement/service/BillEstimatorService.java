@@ -4,6 +4,7 @@ import org.apache.commons.csv.*;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
+import com.smartenergy.energymanagement.util.CsvMappingUtil;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
@@ -12,15 +13,6 @@ import java.util.*;
 @Service
 public class BillEstimatorService {
 
-    // Map user emails to corresponding CSV filenames
-    private static final Map<String, String> emailToCsvMap = new HashMap<>();
-
-    static {
-        emailToCsvMap.put("innovatech@gmail.com", "innova_tech.csv");
-        emailToCsvMap.put("greenpower@gmail.com", "green_power_ltd.csv");
-        emailToCsvMap.put("energymaster@gmail.com", "energy_masters.csv");
-        emailToCsvMap.put("techiesolutions@gmail.com", "techie_solutions.csv");
-    }
 
     // Electricity pricing per kWh for each category
     private static final Map<String, Double> categoryRates = new HashMap<>();
@@ -36,7 +28,7 @@ public class BillEstimatorService {
 
     // Method to estimate bill based on email
     public Map<String, Object> estimateBill(String email) throws IOException {
-        String fileName = emailToCsvMap.get(email);
+        String fileName = CsvMappingUtil.getCsvFileName(email);
         if (fileName == null) {
             throw new IOException("No CSV file found for email: " + email);
         }

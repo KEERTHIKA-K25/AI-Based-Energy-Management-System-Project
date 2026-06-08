@@ -21,11 +21,12 @@ public class User {
     @Column(nullable = false)
     private String password;
 
+    @Column(nullable = false)
     private String companyName;
+
     private String state;
     private String phoneNumber;
-    
-    @Column(nullable = false)
     private String dashboardLink;
+
 
 }

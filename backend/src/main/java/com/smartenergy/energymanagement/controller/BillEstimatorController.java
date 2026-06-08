@@ -21,7 +21,7 @@ public class BillEstimatorController {
     }
 
     @GetMapping
-    public ResponseEntity<?> getBillEstimation(@RequestParam String email) {
+    public ResponseEntity<?> getBillEstimation(@RequestParam("email") String email) {
         logger.info("Received request for bill estimation for email: " + email);
         try {
             Map<String, Object> billDetails = billEstimatorService.estimateBill(email);
